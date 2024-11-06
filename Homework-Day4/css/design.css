@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#D8DAE2;
+    justify-content: center;
+    font-family: 'Merriweather', sans-serif;
+}
+.circle-1{
+    width: 310px;
+    height: 294px;
+    border-radius: 50%;
+    background-color: #E5E7F0;
+    position: absolute;
+    top: 68px;
+    left: 984px;
+    z-index: -1;
+}
+.circle-2{
+    width: 433px;
+    height: 410px;
+    border-radius: 50%;
+    background-color: #E5E7F0;
+    position: absolute;
+    top: 742px;
+    left: 239px;
+    z-index: -1;
+}
+.container{
+    background-color: #EFF0F1;
+    width: 1563px;
+    height: 777px;
+    margin: 216px 18px 216px;
+    border-radius: 26px;
+    padding: 62px;   
+    box-shadow: 0px 76px 90px 0px #DDDDDD;
+}
+.nav{
+    margin-bottom: 56px;
+    gap:24px;
+}
+.nav h1{
+    font-weight: 700;
+    font-size:32px;
+    color: #0E0E38;
+    line-height: 40px;
+    margin-bottom: 24px;
+}
+ul , li{
+    list-style: none;
+    display: inline-flex;
+    color: #0E0E38;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+}
+li{
+    width: auto;
+    height: 44px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 10px;
+    gap: 10px;
+}
+.content{
+    width: 1439px;
+    height: 489px;
+    display: flex;
+    gap:64px;
+}
+.frame{
+    width: 437px;
+    height: 489px;
+    border-radius: 32px;
+    padding: 24px;
+    background-color: #FFFFFF;
+}
+.picture-title{
+    width: 389px;
+    height: 268px;
+    border-radius: 24px;
+    margin-bottom: 16px;
+}
+.more-picture{
+    margin-bottom: 24px;
+}
+.more-picture img{
+    width: 119px;
+    height: 97px;
+    border-radius: 24px;
+}
+.more-picture img:nth-child(1), 
+.more-picture img:nth-child(2){
+    margin-right: 11px;
+}
+.description{
+   text-align: left;
+}
+.description-text,
+.description-icon{
+    display: inline-block;
+    vertical-align: middle;
+}
+.description-text{
+    font-family: "Poppins" , sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #0E0E38;
+    width: 80%;
+}
+.description-icon img {
+    width: 31px;
+    height: 31px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.description-icon span{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0E0E38  ;
+}
