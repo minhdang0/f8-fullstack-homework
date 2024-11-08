@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #e9e6e3;
+}
+li{
+    list-style: none;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 100px;
+    padding: 0 120px;
+}
+.header a{
+    width: 20%;
+    text-decoration: none;
+    color: #1F1D2A;
+    font-weight: 500;
+    font-size: 32px;
+}
+.nav ul,li{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 5px;
+}
+.nav a {
+    font-size: 16px;
+}
+.header>button{
+    width: 110px;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid #1F1D2A;
+    font-weight: 500px;
+    font-size: 16px;
+    padding: 10px ;
+    background-color: transparent;
+}
+/* Banner */
+.banner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 120px;
+    height: 537px;
+    margin-bottom: 110px;
+}
+
+.banner-content h1{
+    font-weight: 600px;
+    font-size: 55px;
+    margin-bottom: 45px;
+    line-height: 83px;
+}
+.banner-content p{
+    width: 418px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #9B948E;
+    margin-bottom: 45px;
+}
+.banner-content button {
+    width: 165px;
+    height: 70px;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #96C97F;
+    line-height: 30px;
+    border-radius: 6px;
+    border: none;
+    padding: 10px;
+}
+.slide{
+    position: relative;
+    width: 50%;
+    height: 505px;
+}
+.slide img{
+    height: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 32px;
+}
+.review{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 174px;
+    height: 131px;
+    background-color: #fff;
+    border-radius: 20px;
+    top: 405px;
+    left: 30px;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+.review-name{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+.job{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #9B948E;
+    height: 42px;
+}
+.stars{
+    display: flex;
+    gap:2px;
+    align-items: center;
+}
+.stars span{
+    font-size: 24px;
+    color: #FFB988;
+    border-radius: 1px solid #ffb988;
+}
+/* socail */
+.social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.social-title{
+    color:#1F1D2A;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.social-network{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+.social-network img{
+    height: 30px;
+    width: auto;
+}
+.career{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.career span{
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.career h2{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+}
+.card{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 120px;
+    gap:30px;
+}
+.teacher_card{
+    width: 295px;
+    height: 450px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.teacher_card img{
+    width: 295px;
+    height: 350px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 10px;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    padding-left:20px  ;
+    gap:6px;
+}
+.name{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+.more-des{
+    color: #9B948E;
+    font-size: 16px;
+    font-weight: 400px;
+}
