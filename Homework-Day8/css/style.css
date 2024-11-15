@@ -276,7 +276,7 @@ main {
 
 .course-card {
     width: 37rem;
-    height: 46.6rem;
+    height: 48.6rem;
     background-color: #fff;
     border-radius: 12px;
     border: 1px solid #E2DFDA
@@ -290,7 +290,7 @@ main {
 }
 
 .course-info {
-    padding: 1.6rem 2.2rem 2.2rem;
+    padding: 1.6rem 2.2rem 2.2rem 2.2rem;
 }
 
 .name-course {
