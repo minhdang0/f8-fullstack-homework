@@ -18,14 +18,36 @@ a{
 body {
     background-color: #fffcf4;
 }
+.btn-medium {
+    width: 137px;
+    height: 50px;
+    border-radius: 26px;
+    background-color: #FFB900;
+    border: none;
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+    line-height: 2.8rem;
+    cursor: pointer;
+}
+.btn-medium:hover {
+    box-shadow: 5px 5px 10px -5px #FFB900,
+                -5px -5px 10px -5px #FFB900,
+                -5px 5px 10px -5px #FFB900,
+                5px -5px 10px -5px #FFB900;
+   
+}
 /* header */
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
-    padding: 0 135px ;
-    margin: 36px 0px 65px 0px;
+    padding: 3.6rem 17.5rem 3.6rem ;
+    top:0px;
+    position: fixed;
+    z-index: 99;
+    background-color: #fffcf4;
 }
 .logo {
     width: 85px;
@@ -82,32 +104,39 @@ header button:hover{
                 -5px 5px 10px -5px #171100,
                 5px -5px 10px -5px #171100;
 }
+
 /* content */
 main {
     width: 1440px;
     margin: 0 auto;
+    margin-top: 150px;
 }
+
 .content {
     display: flex;
     justify-content: space-between;
     padding: 0px 135px;
     align-items: center;
 }
+
 .picture-container {
     position: relative;
     width: 470px;
     height: 685px;
     margin-right: 230px;
 }
+
 .picture-container img {
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
+
 .main-content {
     width: 470px;
     height: 558px;
 }
+
 .main-content h2 {
     font-family: 'Sen', sans-serif;
     font-weight: 700;
@@ -117,6 +146,7 @@ main {
     color: #171100;
     letter-spacing: -0.02em;
 }
+
 .main-content p {
     font-size: 18px;
     font-weight: 400;
@@ -124,12 +154,14 @@ main {
     color: #5F5B53;
     margin-bottom: 38px;
 }
+
 .action {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 48px;
 }
+
 .see-course {
     width: 180px;
     height: 64px;
@@ -143,6 +175,7 @@ main {
     cursor: pointer;
     margin-right: 28px;
 }
+
 .see-course:hover {
     box-shadow: 5px 5px 10px -5px #FFB900,
                 -5px -5px 10px -5px #FFB900,
@@ -233,11 +266,15 @@ main {
     padding: 0rem 13.5rem;
     margin-bottom: 200px;
 }
-
-.title-course {
+.title-course,
+.name-course,
+.register-course {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.title-course {
     margin-bottom: 5.5rem;
 }
 
@@ -255,17 +292,32 @@ main {
     font-size: 1.8rem;
     line-height: 3rem;
     color: #5F5B53;
+    width: 45.8rem;
+    height: auto;
 }
-
-.controller img {
+/* Controller */
+.controller {
+    display: flex;
+    gap:18px;
+}
+.controller button {
+    display: inline-flex;
+    align-items: center ;
+    justify-content: center;
+    background-color: transparent;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    border: 1px solid #FFB900;
+    cursor: pointer;
+    font-size: 20px;
+    color: #FFB900;
 }
 
-.controller img:first-child {
-    margin-right: 18px;
+.controller button:nth-child(2) {
+    background-color: #FFB900;
+    color: #fff;
 }
-
 .course-container {
     display: grid;
     flex-wrap: wrap;
@@ -294,9 +346,6 @@ main {
 }
 
 .name-course {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 6px;
 }
 
@@ -330,12 +379,6 @@ main {
     margin-bottom: 22px;
 }
 
-.register-course {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .register-course span {
     font-weight: 600;
     font-size: 18px;
@@ -352,7 +395,7 @@ main {
     border-radius: 25px;
     background-color: #171100;
     color: #fff;
-    font-size: 14   px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 26px;
     border: none;
@@ -375,4 +418,150 @@ main {
     -5px -5px 10px -5px #FFB900,
     -5px 5px 10px -5px #FFB900,
     5px -5px 10px -5px #FFB900;
+}
+
+/* testimonial */
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 380px;
+    background-color: #2E2100;
+    padding: 9.6rem 13.5rem;
+    margin-bottom: 20rem;
+}
+
+.profile-section img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    margin-bottom: 1.8rem;
+}
+
+.profile-section h3 {
+    color: #F7F7F7;
+    font-family: 'Sen', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.profile-section span {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    color: #BFBCB2;
+}
+
+.pagination-dots {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2.8rem;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #634700 ;
+    border-radius: 50%;
+}
+
+.dot:nth-child(2) {
+    background-color: #FFB900;
+}
+
+.quote-section {
+    width: 77rem;
+    height: 18.8rem;
+    position: relative;
+}
+
+.quote-section img {
+    width: 30px;
+    height: 28px;
+    color: #634700;
+    position: absolute;
+}
+
+.quote-text {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2.6rem;
+    line-height: 4.4rem;
+    color: #fff;
+    padding-top: 2.8rem;
+    padding-left: 3rem;
+}
+/* Banner */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 13.5rem ;
+    margin-bottom: 20rem;
+}
+.img-banner {
+    display: flex;
+    gap: 30px;
+}
+.img-banner img {
+    width: 270px;
+    height: 404px;
+}
+
+.img-banner img:first-child {
+    margin-top: 34px;
+}
+.info-banner {
+    display: flex;
+    flex-direction: column;
+    width: 47rem;
+    height: 32.2rem;
+    row-gap: 16px;;
+}
+
+.info-banner h2 {
+    font-family: 'Sem', sans-serif;
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 4.8rem;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.info-banner p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: #5F5B53;
+}
+
+.info-banner span {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    color: #5F5B53;
+    margin-bottom: 16px;
+}
+
+.banner-2 {
+    flex-direction: row-reverse;
+}
+.banner-2 .info-banner {
+    width: 57rem;
+    height: auto;
+}
+.banner-2 .info-banner p {
+    margin-bottom: 16px;
+}
+.img-banner-2 {
+    width: 47rem;
+    height: 44rem;
+    border-radius: 20px;
 }
