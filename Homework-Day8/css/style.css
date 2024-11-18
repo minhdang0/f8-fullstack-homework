@@ -133,8 +133,10 @@ main {
 }
 
 .main-content {
+    display: flex;
+    flex-direction: column;
     width: 470px;
-    height: 558px;
+    height: auto;
 }
 
 .main-content h2 {
@@ -200,7 +202,7 @@ main {
 .watch-video:hover {
     color: #1711008f;
 }
-.recent {
+.main-content span {
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
@@ -213,14 +215,15 @@ main {
     justify-content: flex-start;
     gap: 28px;
 }
-.info span:first-child {
+.info strong {
     font-family: 'Sen', sans-serif;
     font-weight: 700;
     font-size: 44px;
     line-height: 54px;
     color: #171100;
+    margin-right: 12px;
 }
-.info span:nth-child(2) {
+.info span {
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
