@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .box {
+        width: 500px;
+        height: 500px;
+        border: 2px solid red;
+        position: relative;
+      }
+      i {
+        font-size: 30px;
+        position: absolute;
+        animation: moveSquare 15s linear 0s infinite;
+      }
+      @keyframes moveSquare {
+        0% {
+          top: 0;
+          left: 0;
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+        24% {
+          top: 500px;
+          left: 0;
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+        25% {
+          top: 500px;
+          left: 0;
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        49% {
+          top: 500px;
+          left: 500px;
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        50% {
+          top: 500px;
+          left: 500px;
+          transform: translate(-50%, -50%) rotate(-90deg);
+        }
+        74% {
+          top: 0;
+          left: 500px;
+          transform: translate(-50%, -50%) rotate(-90deg);
+        }
+        75% {
+          top: 0;
+          left: 500px;
+          transform: translate(-50%, -50%) rotate(-180deg);
+        }
+        99% {
+          top: 0;
+          left: 0;
+          transform: translate(-50%, -50%) rotate(-180deg);
+        }
+        100% {
+          top: 0;
+          left: 0;
+          transform: translate(-50%, -50%) rotate(-270deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <i class="ri-arrow-right-line"></i>
+    </div>
+  </body>
+</html>

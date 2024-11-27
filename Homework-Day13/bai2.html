@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        padding-top: 100px;
+      }
+      .heart {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transform: rotate(90deg);
+        position: relative;
+        color: #fff;
+        animation: heartFlow 2s ease-in-out 0s infinite alternate;
+      }
+      .heart::before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50px;
+        position: absolute;
+        top: -50%;
+      }
+      .heart::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50px;
+        position: absolute;
+        left: -50%;
+      }
+      span {
+        position: absolute;
+        top: 60%;
+        left: 48.5%;
+        color: #fff;
+        font-size: 18px;
+        z-index: 99;
+        animation: contentFlow 2s ease-in-out 0s infinite alternate;
+      }
+      @keyframes contentFlow {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.2);
+        }
+      }
+      @keyframes heartFlow {
+        from {
+          transform: rotate(45deg) scale(1);
+        }
+        to {
+          transform: rotate(45deg) scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heart"></div>
+      <span>Love</span>
+    </div>
+  </body>
+</html>
