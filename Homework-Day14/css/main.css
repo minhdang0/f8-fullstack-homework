@@ -144,6 +144,13 @@ nav {
 .menu__item:hover .submenu {
     display: block;
 }
+.menu__item:hover::before {
+    content: "";
+    width: 100%;
+    height: 53px;
+    position: absolute;
+    top: 50%;
+}
 .submenu{
     display: none;
     position: fixed;
