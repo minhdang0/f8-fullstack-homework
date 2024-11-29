@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #333f48;
 }
 
-ul,
-li {
+header{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+ul, li 
+{
     list-style: none;
 }
 
@@ -13,98 +20,220 @@ a {
     text-decoration: none;
 }
 
-header {
+.container
+{
+    max-width: 1300px;
+    margin-inline: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    padding: 0px 100px;
-    gap: 20px;
-    border-bottom: 1px solid grey;
+    padding-top: 1rem;
 }
 
-ul > li {
-    display: inline-flex;
-    justify-content: center;
+.logo__header {
+    display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: .8rem;
+    padding-bottom: 1rem;
 }
 
-.nav__header a {
-    color: #333f48;
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
-    position: relative;
-}
-.main-nav::before {
-    content: "";
-    position: absolute;
-    bottom: -4px; 
-    left:50%;
-    width: 40px;
-    height: 4px;
-    border-radius: 25px;
-    background-color: #CC0000;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.main-nav:hover::before {
-    opacity: 1;
-}
-.header__search {
-    position: relative;
-}
-.header__search .search-input {
-    display: block;
-    height: 40px;
-    background-color: #fff;
-    border: 1px solid #edf1f5;
-    border-radius: 40px;
+.logo__header img {
     width: 100%;
-    padding: 8px 8px 8px 56px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: #333f48;
-    outline: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
 }
-.header__search button {
-    position: absolute;
-    border: none;
-    border-radius: 25px;
-    font-size: 20px;
-    top:20%;
-    left: 5%;
+
+nav {
+    margin-right: auto; 
+    height: 100%;
+    transform: translateY(-7px);
+}
+
+.nav__header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    
+}
+
+.nav__header > li
+{
+    height: 100%;
     cursor: pointer;
 }
 
-
-.nav__header li {
+.nav__header > li > a {
+    font-weight: 700;
     position: relative;
 }
 
-.submenu {
-    display: none;
-    position: absolute;
-    top:calc(100% + 25px);
-    width: 100%;
-}
-.nav__header li:hover .submenu {
-    display: block;
-}
-.submenu--info {
-    display: flex;
-    gap:30px;
-}
-.nav__header li:hover::after {
+.nav__header > li > a::before {
     content: "";
-    height: 25px;
-    width: 100%;
+    background-color: red;
+    margin-inline: auto;
+    width: 0px; 
+    height: 4px; 
     position: absolute;
     left: 0;
+    right: 0; 
+    top: calc(100% + 30px); 
+    transform: scaleX(0);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out; 
+    transition-property: transform, width, opacity;
+}
+
+
+.nav__header > li > a:hover::before {
+    width: 15px;
+    transform: scaleX(2); 
+    opacity: 1;
+}
+/* search */
+.header__search{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 25%;
+    padding-bottom: 1rem;
+    margin-right: 2rem;
+}
+.header__search input{
+    width: 100%;
+    padding: 12px 0 12px 30px;
+    border-radius: 99px;
+    border-color: rgb(237, 241, 245);
+    outline: none;
+}
+.header__search i {
+    position: absolute;
+    left: 8px;
+}
+/* header end */
+.header__end{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 1rem;
+}
+.right__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right__header p {
+    font-size: 12px;
+}
+.right__header i {
+    font-size: 20px;
+}
+.right__header span {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+}
+.menu__item:hover .submenu {
+    display: block;
+}
+.submenu{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    background: #fff;
+    left: -237px;
+    top: 53px;
+    font-size: 13px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.submenu ul li a:hover
+{
+    color: red;
+}
+.submenu .wrap {
+    max-width: 1100px;
+    margin-inline: auto;
+}
+.submenu--info{
+    
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.submenu--info .title , .submenu-right-title span , .submenu-center-title span
+{
+    font-weight: 700;
+}
+
+.submenu--left, .submenu-center, .submenu-right
+{
+    padding-top: 30px;
+}
+
+.submenu-right-title span , .submenu-center-title span{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.submenu--left{
+    margin-right: 20px;
+}
+.submenu--left ul{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.submenu-center{
+    border-left: 1px solid #e6e7e8;
+    border-right: 1px solid #e6e7e8;
+    padding-inline: 4rem;
+    padding-bottom: 5rem;
+}
+.submenu-centercontent {
+    display: flex;
+    gap: 20px;
+}
+.submenu-centercontent ul 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.submenu-right
+{
+    width: 30%;
+    padding-left: 1rem;
+}
+.wrap_content {
+    display: flex;
+    width: 100%;
+}
+.submenu-right-content
+{
+    margin-right: 20px;
+}
+.submenu-right-content ul 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.wrap_img {
+    display: flex;
+    gap: 10px;
+    width: 50%;
+    margin-left: 20px;
+}
+.wrap_img img{
+    width: 100%;
 }
