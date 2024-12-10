@@ -4,6 +4,7 @@ function printMt(number){
             let result = i * j;
             console.log(i + "*" + j + "=" ,result)
         }
+        console.log("\n")
     }
 }
 printMt(10)
