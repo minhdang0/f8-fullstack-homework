@@ -18,7 +18,11 @@ function createUser(name, password, email){
 const users = []
 function register (userInfo,users) {
     const user = createUser(userInfo.name, userInfo.password, userInfo.email);
-    users.push(user);
+    if(user){
+        users.push(user);
+    }else {
+        console.log("Dang ky khon thanh cong")
+    } 
     return users;
 }
 console.log("Đăng ký lần 1")

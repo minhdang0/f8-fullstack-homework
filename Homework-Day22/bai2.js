@@ -17,7 +17,11 @@ function createUser(name, password, email){
 const data = []
 function register (userInfo,data) {
     const user = createUser(userInfo.name, userInfo.password, userInfo.email);
-    data.push(user);
+    if(user){
+        data.push(user);
+    }else {
+        console.log("Dang ky khon thanh cong")
+    } 
     return data;
 }
 function handleLogin(email, password ){ 
