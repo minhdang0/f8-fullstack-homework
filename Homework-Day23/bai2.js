@@ -49,7 +49,14 @@ const categories = [
 	},
 ];
 
+console.log()
 const flattenCategories = (categories, level = 0) => {
+	if(!Array.isArray(categories))
+	{
+		console.log("Sai dữ liệu đầu vào!");
+		return;
+	}
+
     let result = [];
 
     for (let i = 0 ; i < categories.length ; i++) {
@@ -68,6 +75,11 @@ const newArray = flattenCategories(categories);
 console.log(newArray);
 
 const getCategoryName = (categories, categoryId) =>{
+	if(!Array.isArray(categories))
+		{
+			console.log("Sai dữ liệu đầu vào!");
+			return;
+		}
     const result = categories.find((categories) => categories.id === categoryId);
 
     if (!result) return null;

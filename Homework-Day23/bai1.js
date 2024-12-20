@@ -32,6 +32,11 @@ const products = [
 ];
 
 const getTopProducts = (products, top) => {
+	if (!Array.isArray(products) || isNaN(top) || !Number.isInteger(top) || top < 0) {
+		console.log("Sai dữ liệu đầu vào")
+		return;
+	}
+
     const topProduct = [];
 
     while (topProduct.length < top){
