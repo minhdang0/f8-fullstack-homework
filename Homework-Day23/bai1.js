@@ -32,7 +32,7 @@ const products = [
 ];
 
 const getTopProducts = (products, top) => {
-	if (!Array.isArray(products) || isNaN(top) || !Number.isInteger(top) || top < 0) {
+	if (!Array.isArray(products) || isNaN(top) || !Number.isInteger(top) || top < 0 || top > products.length) {
 		console.log("Sai dữ liệu đầu vào")
 		return;
 	}
