@@ -4,7 +4,7 @@ function fibonacci(n) {
         return;
     }
 
-    const accResult = accay.from({length:n});
+    const accResult = Array.from({length:n});
     // console.log(accResult); // [underfined x n ]
 
     const result = accResult.reduce((acc, _, i) => {
@@ -20,17 +20,7 @@ function fibonacci(n) {
 
     console.log(result.join(" "));
 }
-
+let n = parseInt(prompt("Nhập số phần tử trong dãy fibonaci"));
 // Output:
+fibonacci(n); 
 
-fibonacci(5); // 0 1 1 2 3
-
-fibonacci(10); // 0 1 1 2 3 5 8 13 21 34
-
-fibonacci(0); // Số phần tử không hợp lệ
-
-fibonacci(-5); // Số phần tử không hợp lệ
-
-fibonacci("abc"); // Số phần tử không hợp lệ
-
-fibonacci(1); // 0
