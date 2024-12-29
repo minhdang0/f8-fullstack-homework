@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiệu ứng chạy màu từng từ</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .text {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .highlight {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="text" id="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+      consequuntur iure amet saepe asperiores laborum tempora dolorem. Rem,
+      voluptatum ut?
+    </p>
+
+    <script>
+      const textContainer = document.getElementById("text");
+      const text = textContainer.textContent;
+      const words = text.split(" ");
+      textContainer.textContent = " ";
+
+      words.forEach((word) => {
+        const span = document.createElement("span");
+        span.textContent = word + " ";
+        textContainer.appendChild(span);
+      });
+
+      const spans = document.querySelector("#text span");
+      let index = 0;
+
+      function animateWords() {
+        spans.forEach((span) => {
+          span.classList.remove("highlight");
+        });
+
+        spans[index].classList.add("highlight");
+        index = (index + 1) % spans.length;
+      }
+
+      setInterval(animateWords, 200);
+    </script>
+  </body>
+</html>
