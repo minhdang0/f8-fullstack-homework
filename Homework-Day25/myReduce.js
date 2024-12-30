@@ -7,7 +7,11 @@
  */
 
 Array.prototype.reduce2 = function (callback, initialValue) {
+    if ( this.length === 0 && arguments.length < 2) {
+      return "Reduce of empty array with no initial value"
+    }
     let i = 0;
+    
     if (arguments.length < 2) {
         i = 1;
         initialValue = this[0];
