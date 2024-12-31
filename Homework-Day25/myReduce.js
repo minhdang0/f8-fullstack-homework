@@ -10,16 +10,16 @@ Array.prototype.reduce2 = function (callback, initialValue) {
     if ( this.length === 0 && arguments.length < 2) {
       return "Reduce of empty array with no initial value"
     }
-    let i = 0;
     
-    if (arguments.length < 2) {
-        i = 1;
-        initialValue = this[0];
+    let result = arguments.length < 2 ? this[0] : initialValue;
+    let startIndex = arguments.length < 2 ? 1 : 0;
+
+    for (let i = startIndex; i < this.length; i++) {
+        if (this.hasOwnProperty(i)) {
+            result = callback(result, this[i], i, this);
+        }
     }
-    for (; i < this.length ; i++) {
-        initialValue = callback(initialValue,this[i], i, this);
-    }
-    return initialValue;
+    return result;
 };
 
 // Sample usage
