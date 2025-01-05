@@ -57,7 +57,7 @@ const data = [
 ];
 
 const convertNested = (data, parent = 0) => {
-	if(Array.isArray(data) && Array.length === 0) {
+	if(Array.isArray(data) && datadata.length === 0) {
 		return "Valid input";
 	}
     const result = data.filter((item) => item.parent === parent  ).map((item) => {
