@@ -50,7 +50,7 @@ const categories = [
 ];
 
 const flattenCategories = (arr, parentId = 0) => {
-    if (!Array.ísArray(arr) && arr.length === 0 ) {
+    if (!Array.isArray(arr) && arr.length === 0 ) {
         return "Valid input";
     }
     const result = arr.reduce((acc, cur) =>{
