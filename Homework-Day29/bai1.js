@@ -14,13 +14,13 @@ const buildMenu = (menu) => {
         console.log("Invalid value");
         return;
     }
-    
+
     const map = menu.reduce((acc, cur) => {
         const temp = cur.parentId;
         if (!acc[temp]) {
             acc[temp] = [];
         }
-        acc[temp].push(cur); // Sử dụng `cur` thay vì `item`
+        acc[temp].push(cur); 
         return acc;
     }, {});
 
