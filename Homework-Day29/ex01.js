@@ -10,8 +10,8 @@ const menu = [
 ];
   
 const buildMenu = (menu) => {
-    if (!Array.isArray(menu) ) {
-        console.log("Invalid value");
+    if (!Array.isArray(menu) || menu.length === 0 ) {
+        alert("Invalid input!")
         return;
     }
 

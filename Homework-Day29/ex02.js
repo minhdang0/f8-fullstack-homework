@@ -1,6 +1,6 @@
 const renderCart = (cart) => {
-    if (!Array.isArray(cart)) {
-        console.log("Invalid input!");
+    if (!Array.isArray(cart) || cart.length === 0) {
+        alert("Invalid input")
         return;
     }
     cart.forEach(item => {
