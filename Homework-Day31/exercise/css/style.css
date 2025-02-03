@@ -1,0 +1,152 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+  }
+.add-list button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.add-list button:hover {
+    background-color: #45a049;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+.btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 2px;
+}
+.edit { color: blue; }
+.delete { color: red; }
+.toggle { color: green; }
+.btn:hover { opacity: 0.7; }
+
+input[type=text] {
+    border: 2px solid black;
+    width: 200px;
+    height: 24px;
+    border-radius: 10px;
+    padding: 10px;
+}
+input[type=text]::placeholder {
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+}
+
+input[type=text]:focus {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#save-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: yellowgreen;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+#save-btn:hover {
+    opacity: 0.7;
+    background-color: #fff;
+}
+.add-task {
+    position: absolute;
+    left: 35%;
+    top: 0.5%;
+    display: none;
+}
+
+.active {
+    display: block !important;
+}
+.inactive{
+    display: none !important;
+}
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+.notification.success {
+    background-color: green;
+}
+
+.notification.error {
+    background-color: red;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.edit-task {
+    position: fixed; 
+    top: 0;
+    left: 7%;
+    background-color: #fff;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+}
+.edit-task h3 {
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.edit-task label {
+    font-size: 18px;
+}
+.edit-task select {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.edit-btn button {
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+.edit-btn button:hover {
+    background-color: yellow;
+    color: #fff;
+}

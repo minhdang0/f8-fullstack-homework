@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bé Tập Tính Website</h1>
+      
+      <div class="calculator-main">
+        <div class="in-out">
+          <div class="input-group">
+            <label>Nhập số thứ nhất</label>
+            <input type="number" id="num1" />
+          </div>
+          <div class="input-group">
+            <label>Nhập số thứ hai</label>
+            <input type="number" id="num2" />
+          </div>
+          <div class="input-group">
+            <label>Kết quả</label>
+            <input type="text" id="result" class="result" disabled />
+          </div>
+        </div>
+        <div class="choose">
+          <div class="operations">
+            <label
+              ><input type="radio" name="operation" value="add" /> Cộng</label
+            >
+            <label
+              ><input type="radio" name="operation" value="subtract" />
+              Trừ</label
+            >
+            <label
+              ><input type="radio" name="operation" value="multiply" />
+              Nhân</label
+            >
+            <label
+              ><input type="radio" name="operation" value="divide" />
+              Chia</label
+            >
+          </div>
+
+          <button class="calculate-btn" onclick="calculate()">Tính</button>
+        </div>
+        <p class="error" id="error-message"></p>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

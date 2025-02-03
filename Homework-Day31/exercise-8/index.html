@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chia Bill</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Chia Bill</h2>
+
+      <label for="totalBill">Tổng bill:</label>
+      <input type="number" id="totalBill" placeholder="Nhập tổng tiền bill" />
+      <p id="errorTotalBill" class="error"></p>
+
+      <label for="peopleCount">Số người chia:</label>
+      <input type="number" id="peopleCount" placeholder="Nhập số người" />
+      <p id="errorPeopleCount" class="error"></p>
+
+      <label for="tipAmount">Tiền tip:</label>
+      <input
+        type="number"
+        id="tipAmount"
+        placeholder="Nhập tiền tip (nếu có)"
+      />
+      <p id="errorTipAmount" class="error"></p>
+
+      <button onclick="calculateBill()">Tính tiền</button>
+
+      <div class="result">
+        <p id="perPerson"></p>
+        <p id="totalAmount"></p>
+      </div>
+    </div>
+    <script src="main.js" defer></script>
+  </body>
+</html>
