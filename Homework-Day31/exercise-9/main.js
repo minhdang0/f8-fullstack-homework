@@ -5,7 +5,7 @@ const productData = [
     { product_id: 4, product_name: "Sản phẩm 4", product_price: 4000 },
   ];
   
-  function renderProductList() {
+const renderProductList = () => {
     const productTable = document.querySelector("#product_table tbody");
     productTable.innerHTML = "";
   
@@ -26,9 +26,9 @@ const productData = [
     document.querySelectorAll(".add-to-cart").forEach((button) => {
       button.addEventListener("click", addToCart);
     });
-  }
+}
   
-  function addToCart(event) {
+function addToCart(event) {
     const productId = parseInt(event.target.dataset.id);
     const quantityInput = document.querySelector(`#quantity_${productId}`);
     const quantity = parseInt(quantityInput.value) || 1;
@@ -45,9 +45,9 @@ const productData = [
   
     sessionStorage.setItem("cart", JSON.stringify(cart));
     renderCart();
-  }
+}
   
-  function renderCart() {
+const renderCart = () =>  {
     const cartContainer = document.querySelector("#cart_data");
     const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
   
@@ -77,7 +77,7 @@ const productData = [
     cart.forEach((item, index) => {
       const product = productData.find((p) => p.product_id === item.product_id);
       if (!product) return; 
-      
+
       const total = product.product_price * item.quantity;
       totalQuantity += item.quantity;
       totalPrice += total;
@@ -118,9 +118,9 @@ const productData = [
   
     document.querySelector("#update_cart").addEventListener("click", updateCart);
     document.querySelector("#delete_cart").addEventListener("click", deleteAllCart);
-  }
+}
   
-  function updateCartItem(event) {
+const updateCartItem = (event) => {
     const productId = parseInt(event.target.dataset.id);
     const quantity = parseInt(event.target.value) || 1;
   
@@ -130,9 +130,9 @@ const productData = [
   
     sessionStorage.setItem("cart", JSON.stringify(cart));
     renderCart();
-  }
+}
   
-  function deleteCartItem(event) {
+const deleteCartItem = (event) => {
     const productId = parseInt(event.target.dataset.id);
     let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
   
@@ -140,14 +140,14 @@ const productData = [
   
     sessionStorage.setItem("cart", JSON.stringify(cart));
     renderCart();
-  }
+}
   
-  function updateCart() {
+const updateCart = () => {
     alert("Giỏ hàng đã được cập nhật!");
     renderCart();
-  }
+}
   
-  function deleteAllCart() {
+const deleteAllCart = () => {
     if (confirm("Bạn có chắc chắn muốn xóa giỏ hàng?")) {
       sessionStorage.removeItem("cart");
       renderCart();
@@ -157,5 +157,5 @@ const productData = [
   document.addEventListener("DOMContentLoaded", () => {
     renderProductList();
     renderCart();
-  });
+});
   
