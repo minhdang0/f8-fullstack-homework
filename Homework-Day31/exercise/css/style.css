@@ -81,7 +81,7 @@ input[type=text]:focus {
     display: block !important;
 }
 .inactive{
-    display: none !important;
+    display: none ;
 }
 .notification {
     position: fixed;
@@ -109,7 +109,8 @@ input[type=text]:focus {
     100% { opacity: 0; transform: translateY(-10px); }
 }
 
-.edit-task {
+#edit-task {
+    display: none;
     position: fixed; 
     top: 0;
     left: 7%;
